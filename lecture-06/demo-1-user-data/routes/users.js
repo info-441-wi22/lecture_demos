@@ -13,4 +13,10 @@ router.post('/addUserData', async function(req, res, next) {
   await fs.writeFile("data/userData.json", JSON.stringify(req.body))
 });
 
+router.get('/getUsers', async function(req, res, next) {
+  let userData = await fs.readFile("data/userData.json")
+  res.type("json")
+  res.send(userData)
+})
+
 export default router;

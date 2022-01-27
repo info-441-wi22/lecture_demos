@@ -20,3 +20,11 @@ async function uploadData(){
 
     // see what the server said
 }
+
+
+async function loadUsers() {
+    let response = await fetch("users/getUsers")
+    let usersData = await response.json();
+
+    document.getElementById("results").innerHTML = JSON.stringify(usersData)
+}
