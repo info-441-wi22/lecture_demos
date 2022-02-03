@@ -1,23 +1,23 @@
-import  {readFileSync} from 'fs';
+import  * as fs from 'fs';
 import dateFormat from 'dateFormat';
 import express from 'express';
 const app = express()
 
 app.get('/', (req, res) => {
   res.type('html')
-  let fileContents = readFileSync("index.html")
+  let fileContents = fs.readFileSync("index.html")
   res.send(fileContents)
 })
 
 app.get('/style.css', (req, res) => {
   res.type('css')
-  let fileContents = readFileSync("style.css")
+  let fileContents = fs.readFileSync("style.css")
   res.send(fileContents)
 })
 
 app.get('/index.js', (req, res) => {
   res.type('js')
-  let fileContents = readFileSync("index.js")
+  let fileContents = fs.readFileSync("index.js")
   res.send(fileContents)
 })
 
