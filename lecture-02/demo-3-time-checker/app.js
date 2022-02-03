@@ -1,6 +1,6 @@
-import  {fs} from 'fs';
-import {dateFormat} from 'dateFormat';
-import {express} from 'express';
+import fs from 'fs';
+import dateFormat from 'dateFormat';
+import express from 'express';
 const app = express()
 
 app.get('/', (req, res) => {
