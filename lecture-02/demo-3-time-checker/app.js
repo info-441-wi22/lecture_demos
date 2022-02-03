@@ -4,6 +4,7 @@ import express from 'express';
 const app = express()
 
 app.get('/', (req, res) => {
+  console.log('hello')
   res.type('html')
   let fileContents = fs.readFileSync("index.html")
   res.send(fileContents)
