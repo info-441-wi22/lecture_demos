@@ -1,0 +1,30 @@
+<html>
+<head>
+
+    <script>
+        const socketURL = "ws://localhost:3000/socket"
+        let webSocket = new WebSocket(socketURL)
+
+        function sendMessage() {
+            const val = document.getElementById("textInput").value
+            webSocket.send(val)
+        }
+
+        webSocket.onmessage = function (event) {
+            const msg = event.data
+            document.getElementById("output").innerText += msg
+            document.getElementById("output").innerHTML += "<br>"
+        }
+    </script>
+
+</head>
+<body>
+    <h1>Web socket messenger demo!</h1>
+
+    <input type="text" id="textInput" />
+    <button id="sendBtn" onclick="sendMessage()">send</button>
+
+    <h3>chat history</h3>
+    <div id = "output"></div>
+</body>
+</html>
