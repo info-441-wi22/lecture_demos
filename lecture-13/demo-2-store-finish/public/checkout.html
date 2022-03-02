@@ -1,0 +1,27 @@
+<html>
+
+<head>
+  <title>Store</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <script src="javascripts/checkout.js" ></script>
+
+  <script src="https://www.paypal.com/sdk/js?client-id=AZa75mkUnG0OEnTCzVn_FxrgyA7UxiXyV54mXEGBKYqyFQWKtUnDdVUCyYnef2aRvm45LriMqfRlrlo-&components=buttons"></script>
+</head>
+
+<body onload="init()">
+  <h1>Checkout</h1>
+
+  <h2>Your Cart</h2>
+  <div id="yourcartdiv">
+     Loading...
+  </div>
+  <hr>
+  <strong>Total price: $<span id="total_price"></span></strong>
+  <hr>
+
+
+  <div id="paypaldiv"></div>
+
+</body>
+
+</html>
